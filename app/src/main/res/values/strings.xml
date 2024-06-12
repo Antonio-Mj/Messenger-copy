@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Messenger</string>
+    <string name="chats">Chats</string>
+    <string name="llamadas">Llamadas</string>
+    <string name="personas">Personas</string>
+    <string name="historias">Historias</string>
+    <string name="mensajes">Mensajes</string>
+    <string name="buscar">Buscar</string>
+    <string name="antonio_mejia">Antonio Mejia</string>
+    <string name="_3_37_pm">3:37 pm</string>
+    <string name="como_estas">¿Como estas?</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="p">•</string>
+</resources>

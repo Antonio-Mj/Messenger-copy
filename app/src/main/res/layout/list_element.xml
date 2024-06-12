@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/todo"
+        android:paddingStart="11dp"
+        android:paddingEnd="9dp"
+        android:src="@drawable/yop" />
+
+    <ImageView
+        android:id="@+id/activo"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@id/iconImageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/active"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/receiveImageView"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:contentDescription="@string/todo1"
+        android:paddingStart="12dp"
+        android:paddingEnd="15dp"
+        android:src="@drawable/iconamooncheckcircle1fill" />
+
+    <LinearLayout
+        android:id="@+id/messageContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/receiveImageView"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/namesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/antonio_mejia"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:baselineAligned="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/messageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/como_estas"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/p"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/hourTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:text="@string/_3_37_pm"
+                android:textSize="14sp" />
+        </LinearLayout>
+        </LinearLayout>
+</RelativeLayout>

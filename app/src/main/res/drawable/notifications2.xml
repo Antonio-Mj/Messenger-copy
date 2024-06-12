@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+
+  <!-- Circulo Rojo -->
+  <path
+      android:pathData="M128,128 m-100,0a100,100 0,1 1,200 0a100,100 0,1 1,-200 0"
+      android:fillColor="#FF0000"/>
+
+  <!-- Tu path original -->
+  <path
+      android:pathData="M128,20a108,108 0,1 0,108 108A108.12,108.12 0,0 0,128 20m0,192a84,84 0,1 1,84 -84a84.09,84.09 0,0 1,-84 84m33.83,-130.88a12,12 0,0 1,1.45 11l-32,88a12,12 0,0 1,-22.56 -8.2L134.87,100H104a12,12 0,0 1,0 -24h48a12,12 0,0 1,9.83 5.12"
+      android:fillColor="@color/black"/>
+</vector>

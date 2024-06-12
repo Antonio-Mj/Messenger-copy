@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconMenu"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:paddingStart="19dp"
+            android:paddingEnd="14dp"
+            android:src="@drawable/menu_burger_icon_191633"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iconMenu"
+            android:layout_toEndOf="@id/iconMenu"
+            android:layout_marginStart="-33dp"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:id="@+id/notifications2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/notifications2"
+                android:drawablePadding="5dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nameChats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@id/iconMenu"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/chats"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/newMessageImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/newmessage_compose_80617" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/search_magnifier_dark" />
+            <EditText
+                android:id="@+id/editTextBuscar"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="@string/buscar"
+                android:padding="1dp"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/messageIcon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/messages"
+                android:drawablePadding="5dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/messageIcon"
+            android:layout_toEndOf="@id/messageIcon"
+            android:layout_marginStart="-13dp"
+            android:layout_marginTop="-5dp">
+
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:drawablePadding="5dp"
+                android:src="@drawable/notifications1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageIcon"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:text="@string/chats"
+            android:textColor="@color/blue"
+            android:textSize="11sp"
+            tools:ignore="SmallSp,TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/callsIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="65dp"
+            android:layout_toEndOf="@id/messageIcon"
+            android:src="@drawable/video_camera_icon_icons_com_53843" />
+
+        <TextView
+            android:id="@+id/callsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/callsIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="62dp"
+            android:layout_toEndOf="@+id/messageText"
+            android:text="@string/llamadas"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="11sp"
+            tools:ignore="SmallSp,TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/personsIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_toStartOf="@+id/StoriesIcon"
+            android:layout_toEndOf="@id/callsIcon"
+            android:src="@drawable/people_111145" />
+
+        <TextView
+            android:id="@+id/personsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personsIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60dp"
+            android:layout_toStartOf="@+id/StoriesText"
+            android:text="@string/personas"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="11sp"
+            tools:ignore="SmallSp,TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/StoriesIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/carousel_icon_214861" />
+
+        <TextView
+            android:id="@+id/StoriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageIcon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="35dp"
+            android:text="@string/historias"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="11sp"
+            tools:ignore="SmallSp,TextSizeCheck" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

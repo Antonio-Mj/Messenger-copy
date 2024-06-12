@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+  <!-- Circulo Rojo -->
+  <path
+      android:pathData="M256,256 m-180,0a180,180 0,1 1,360 0a180,180 0,1 1,-360 0"
+      android:fillColor="@color/gris_oscurodos"/>
+
+  <!-- Logo -->
+  <path
+      android:pathData="M356.66,244.66H155.33a11.34,11.34 0,0 0,0 22.68H356.66a11.34,11.34 0,0 0,0 -22.68Z"
+      android:fillColor="@color/white"/>
+  <path
+      android:pathData="M356.66,176H155.33a11.34,11.34 0,0 0,0 22.68H356.66a11.34,11.34 0,0 0,0 -22.68Z"
+      android:fillColor="@color/white"/>
+  <path
+      android:pathData="M356.66,313.29H155.33a11.34,11.34 0,0 0,0 22.68H356.66a11.34,11.34 0,0 0,0 -22.68Z"
+      android:fillColor="@color/white"/>
+  <path
+      android:pathData="M256,58.65c-108.38,0 -196.56,88.18 -196.56,196.56S147.62,451.77 256,451.77 452.56,363.6 452.56,255.21 364.38,58.65 256,58.65ZM256,429.1c-95.88,0 -173.88,-78 -173.88,-173.89S160.12,81.33 256,81.33s173.88,78 173.88,173.88S351.88,429.1 256,429.1Z"
+      android:fillColor="@color/gris_oscurodos"/>
+</vector>
